@@ -74,12 +74,10 @@ jobs:
         run: npm run cy:test
 ```
 
-## Reporting
-- **Cypress Dashboard**: Can be integrated for test monitoring.
-- **Newman HTML Reports**: Generate Postman test reports:
-  ```sh
-  newman run postman-collection.json -r html --reporter-html-export newman-report.html
-  ```
+## Mindmap for gathering test cases:
+Map1
+Map2
+Map3
 
 ## Roadmap for future improvements
 1. Use newman to run postman tests in cli, which can be used for ci pipeline
