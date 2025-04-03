@@ -1,7 +1,7 @@
 # API & Platform Testing Project
 
 ## Overview
-This project is designed for testing APIs and platforms using **Cypress** and **Postman**. It includes automation for functional testing to ensure the reliability of the APIs and web application.
+This project is designed for testing E2E and APIs using **Cypress** and **Postman**. It includes automation for functional testing to ensure the reliability of the APIs and web application.
 
 ## Technologies Used
 - **Cypress**: End-to-end testing framework for UI and API testing.
