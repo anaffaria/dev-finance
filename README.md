@@ -53,7 +53,7 @@ dev-finance/
 │   |    ├── Dev_environment.postman_environment                   # Postman environment
 ├── package.json                                                   # Project dependencies
 ├── cypress.config.js                                              # Cypress config file
-├── package-lock.json                                              # Cypress config file
+├── package-lock.json                                              # Dependencies version control file
 ├── README.md                                                      # Documentation
 ```
 
