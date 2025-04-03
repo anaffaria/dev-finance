@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "f2079161-a510-4ea7-b3cc-a129456e7187",
+		"name": "Anime Jikan API Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11873249"
+	},
+	"item": [
+		{
+			"name": "Get Anime by ID - Success",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response contains anime title\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.data.title).to.exist;",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"packages": {},
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api_url}}/v4/anime/{{anime_id}}",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"v4",
+						"anime",
+						"{{anime_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Anime by Invalid ID - Failure",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api_url}}/v4/anime/{{invalid_anime_id}}",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"v4",
+						"anime",
+						"{{invalid_anime_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Anime by Name - Success",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response contains anime list\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.data.length).to.be.above(0);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api_url}}/v4/anime?q={{valid_search_key}}",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"v4",
+						"anime"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "{{valid_search_key}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Anime by Nonexistent Name - Failure",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response contains empty list\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.data.length).to.eql(0);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api_url}}/v4/anime?q={{invalid_search_key}}",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"v4",
+						"anime"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "{{invalid_search_key}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

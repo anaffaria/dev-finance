@@ -1,0 +1,24 @@
+{
+    "homePage": {
+        "btnNewTransaction": "#transactions > .button"
+    },
+    "modal":{
+        "modalTransaction": "#form > h2", 
+        "inputDescription": "#description", 
+        "inputAmount": "#amount",
+        "inputDate": "#date",
+        "btnSave": "button",
+        "btnCancel": ""
+    },
+    "balance":{
+        "entry": "p.card__income", 
+        "expense": "p.card__expense", 
+        "total": "p.card__amount"
+    },
+    "dataList":{
+        "inputDescription": ".data-table__description", 
+        "inputAmountIncome": ".data-table__price-income",
+        "inputAmountExpense": ".data-table__price-expense",
+        "inputDate": ".data-table__date" 
+    }
+}

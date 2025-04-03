@@ -1,0 +1,35 @@
+{
+    "homePage": {
+        "textBtnTransaction": "+ Nova transação",
+        "password": "senha123"
+    },
+    "modal": {
+        "textModalTransaction": "Nova Transação",
+        "saveTransaction": "Salvar",
+        "cancelTransaction": "Cancel"
+    },
+    "incomingTransaction": {
+        "description": "Salário",
+        "amount": "1500", 
+        "entries": "0"
+    }, 
+    "expenseTransaction": {
+        "description": "Mercado",
+        "amount": "-450", 
+        "entries": "0"
+    },
+    "expenseZeroTransaction": {
+        "description": "Teste",
+        "amount": "0", 
+        "entries": "0"
+    },
+    "verifyTotalTransactions": {
+        "descriptionIncome": "Transação de Entrada",
+        "amountIncome": "0.01", 
+        "descriptionExpanse": "Transação de Saída",
+        "amountIncomeExpanse": "-0.02", 
+        "entriesIncome": "0.01",
+        "exitExpanse": "-0.02",
+        "total": "-0.01"
+    }
+}
