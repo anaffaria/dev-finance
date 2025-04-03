@@ -74,10 +74,16 @@ jobs:
         run: npm run cy:test
 ```
 
-## Mindmap for gathering test cases:
-Map1
-Map2
-Map3
-
 ## Roadmap for future improvements
 1. Use newman to run postman tests in cli, which can be used for ci pipeline
+
+## Mindmap for gathering test cases:
+
+#### Legend:
+- Tests with ✔️ stands for implemented tests
+- The remaining tests are mapped tests for future implementations
+<img src="https://github.com/anaffaria/dev-finance/blob/master/.github/readme/images/01-map.png" width="800" alt="mind-map1">
+
+<img src="https://github.com/anaffaria/dev-finance/blob/master/.github/readme/images/02-map.png" width="800" alt="mind-map2">
+
+<img src="https://github.com/anaffaria/dev-finance/blob/master/.github/readme/images/03-map.png" width="800" alt="mind-map3">
